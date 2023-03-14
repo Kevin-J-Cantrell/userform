@@ -16,9 +16,9 @@ const Form = (props) => {
     const FirstNameErrMsg = (e) => {
         setFirstName(e.target.value);
         if (e.target.value.length < 1) {
-            setFirstError("Name is required!");
-        } else if (e.target.value.length < 4) {
-            setFirstError("Must be 4 characters or more!");
+            setFirstError("First Name is required!");
+        } else if (e.target.value.length < 2) {
+            setFirstError("Must be 2 characters or more!");
         } else {
             setFirstError("");
         }
@@ -27,9 +27,9 @@ const Form = (props) => {
     const LastNameErrMsg = (e) => {
         setLastName(e.target.value);
         if (e.target.value.length < 1) {
-            setLastError("Name is required!");
-        } else if (e.target.value.length < 3) {
-            setLastError("Must be 3 characters or more!");
+            setLastError("Last Name is required!");
+        } else if (e.target.value.length < 2) {
+            setLastError("Must be 2 characters or more!");
         } else {
             setLastError("");
 
@@ -39,9 +39,9 @@ const Form = (props) => {
     const EmailErrMsg = (e) => {
         setEmail(e.target.value);
         if (e.target.value.length < 1) {
-            setEmailErr("Name is required!");
-        } else if (e.target.value.length < 3) {
-            setEmailErr("Must be 3 characters or more!");
+            setEmailErr("Email is required!");
+        } else if (e.target.value.length < 5) {
+            setEmailErr("Must be more then 5 characters!");
         } else {
             setEmailErr("");
 
@@ -51,9 +51,9 @@ const Form = (props) => {
     const PasswordErrMsg = (e) => {
         setPassword(e.target.value);
         if (e.target.value.length < 1) {
-            setPasswordErr("Name is required!");
-        } else if (e.target.value.length < 4) {
-            setPasswordErr("Must be 4 characters or more!");
+            setPasswordErr("Password is required!");
+        } else if (e.target.value.length < 8) {
+            setPasswordErr("Must be 8 characters or more!");
 
         } else {
             // an empty string is considered a "falsy" value
